@@ -32,4 +32,27 @@
 			```
 		- MacOS 	
 
-	
+## Domain Name System (DNS)
+DNS Server
+- host : a device that participate in a network
+- cliens
+- hosts file
+- security
+- DNS server
+- Public DNS
+	- `1.1.1.1`, `1.0.0.1`
+- DNS Internal, hierarchical
+	- blog.example.com.
+	- sub, second-level, top-level, root	
+	- client -> root DNS name server -> top-level DNS name server -> second-level DNS name server -> sub DNS name server
+	- DNS register : Registrant -> registrar (authoritative name server, example.com A 123.456.123.456) -> registry (top-level domain, example.com NS a.iana-servers.net) -> ICANN (root name server, com NS a.gtld-servers.net)
+	- client -> DNS Server -> Root name server -> top-level domain -> authoritative name server -> IP address
+	- nslookup, dig
+		```
+		$ nslookup example.com
+		$ nslookup -type=a example.com # non-authoriative answer (IP address from cache in DNS server)
+		$ nslookup -type=ns example.com
+		$ nslookup example.com a.iana-servers.net
+		```
+	- freenom.com	
+
